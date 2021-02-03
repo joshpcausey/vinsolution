@@ -51,5 +51,3 @@ function splitString(input) {
   }
   return output;
 }
-
-console.log(formatString("smooth . test ..smooth"));
