@@ -29,7 +29,7 @@ function splitString(input) {
   let length = 0;
   let inAWord = false;
   for (let i = 0; i < input.length; i++) {
-    if (isCharacterALetter(input[i])) {
+    if (/[a-zA-Z]/.test(input[i])) {
       if (!inAWord) {
         inAWord = true;
         start = i;
@@ -50,8 +50,4 @@ function splitString(input) {
     }
   }
   return output;
-}
-
-function isCharacterALetter(char) {
-  return /[a-zA-Z]/.test(char);
 }
