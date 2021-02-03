@@ -30,12 +30,12 @@ function splitString(input) {
   let inAWord = false;
   for (let i = 0; i < input.length; i++) {
     if (/[a-zA-Z]/.test(input[i])) {
-      if (!inAWord) {
+      if (i === input.length - 1) {
+        output.push(input.slice(start));
+      } else if (!inAWord) {
         inAWord = true;
         start = i;
         length = 1;
-      } else if (i === input.length - 1) {
-        output.push(input.slice(start));
       } else {
         length += 1;
       }
@@ -51,3 +51,5 @@ function splitString(input) {
   }
   return output;
 }
+
+console.log(formatString("smooth . test ..smooth"));
