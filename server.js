@@ -12,7 +12,6 @@ function formatString(input) {
       splitInput[i] = formatSubstring(splitInput[i]);
     }
   }
-  console.log(splitInput.join(""));
   return splitInput.join("");
 }
 
@@ -56,5 +55,3 @@ function splitString(input) {
 function isCharacterALetter(char) {
   return /[a-zA-Z]/.test(char);
 }
-
-formatString("testing .=/ test");
